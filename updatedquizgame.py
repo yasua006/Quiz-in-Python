@@ -22,7 +22,7 @@ options = (
     ("A. https://www.python.com/downloads/", "B. https://www.python.co/downloads/", "C. https://www.python.org/downloads/", "D. https://www.python.org/download"),
     ("A. Van Rossum needed a name that was short, unique, and slightly mysterious, so he called it the Python", "B. Van Rossumes needed a name that was short, unique, and slightly mysterious, so he decided to call the language Python", "C. Van Rossum needed a name that was small, unique, and slightly mysterious, so he decided to call the language Python", "D. None"),
     ("A. To report a bug or submit a patch, used issue tracker at: https://github.com/python/cpython/issues.", "B. To report a bug or submit a patch, use the issue tracker at: https://github.com/python/cpython/issues.", "C. To report a bug or submit a patch. Track at: https://github.com/python/cpython/issues.", "D. To report a bug or submit a patch, visit and smash: https://github.com/python/cpython/issues."),
-    ("A. Vey Stable", "B. Very Stable", "C. Not that stable", "D. None"),
+    ("A. Vey Stable", "B. Very Stable", "C. Not stable", "D. None"),
     ("A. Yes, there are many, and more are being published.", "B. Yes, there are many, and more were being published.", "C. Ys, there are many, and more are being published.", "D. No, there aren't."),
     ("A. There are probably millions of users, though it's difficult to obtain an exact count", "B. There are probably millions of users, though it isn't difficult to obtain an exact count", "C. There are probably billions of users, though it's difficult to obtain an exact count", "D. None"),
     ("A. You can do anything you want with the source, as long as you leave the copyrights in and display those copyrights in any documentation about the snake that you produce.", "B. You can do anything you want with it, as long as you leave the copyrights in and display those copyrights in any documentation about Python that you produce.", "C. You can do anything you want with the source, as long as you do not leave the copyrights in and display those copyrights in any documentation about Python that you produce.", "D. You can do anything you want with the source, as long as you leave the copyrights in and display those copyrights in any documentation about Python that you produce.")
@@ -56,7 +56,9 @@ def play_quiz():
     num_questions = len(questions) # percentage based
 
     for i in range(num_questions):
+        print("\nQuestion {}: ".format(i + 1)) # question order with new line character
         display_question(questions[i], options[i])
+
         user_answer = input("Enter your answer (A/B/C/D): ").upper()
 
         if user_answer == answers[i]:
@@ -71,7 +73,7 @@ def play_quiz():
         else:
             print("Incorrect!")
 
-    print("Quiz ended!")
+    print("\nQuiz ended!") # nice spacing
     print("Your score: {}/{}".format(score, num_questions)) # from number space number to number/number
 
 start()
