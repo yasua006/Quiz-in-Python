@@ -1,1 +1,1 @@
-A quiz with prompts in Python, everything else has to do something with HTML!
+A quiz with some UX in Python, everything else has to do something with HTML!
